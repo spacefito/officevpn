@@ -9,6 +9,8 @@ For example. If I want to go to host 192.168.0.101 which is in my office, the op
 to that ip and port 22 to the new ip and port pair together (IP SOCKET). 
 
 - Goal:  ip socket redirection.  (This is a single unit, a sdn controller that simply does socket redirection based on a config file 
+- Acceptance Test: traffic going through the openvswitch instace has its destination ip and tcp/udp port reconfigured based on a provided config file of the form: 
+            oldip:oldport --> newip:newport
 
 
 - Requirement 2:
