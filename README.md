@@ -30,6 +30,7 @@ The OS only knows it needs to send ip traffic to a gateway.
 - Requirement 3: Vpn tunnel creation. 
   The virtual router should create a vpn tunnel and plug in that tunnel into the correct port of the openvswitch
   Supported vpn tunnel types: 
-            ssh tunnel (only for ssh connectoins) = This is just sending to a socket redirection, mentioned above
+            ssh redirection (only for ssh connectoins) = This is just sending to a socket redirection, mentioned above
             vxlan - already supported in openvswitch
             gre - already supported in openvswitch
+            ssh tunnel - an actual ssh connection being used to encrypt data across, old school ssh tunnel!
