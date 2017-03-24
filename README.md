@@ -25,4 +25,11 @@ OS of System <-> virtual_router <-> external network
 The virtual router should have the smarts to connect to any other endpoint and exchange routing information with it.  
 The OS only knows it needs to send ip traffic to a gateway. 
 
-- Goal 
+- Goal : packet with ip:port -> openvswitch -> it is sent out the appropriate vpn tunnel. 
+
+- Requirement 3: Vpn tunnel creation. 
+  The virtual router should create a vpn tunnel and plug in that tunnel into the correct port of the openvswitch
+  Supported vpn tunnel types: 
+            ssh tunnel (only for ssh connectoins) = This is just sending to a socket redirection, mentioned above
+            vxlan - already supported in openvswitch
+            gre - already supported in openvswitch
