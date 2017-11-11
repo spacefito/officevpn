@@ -8,6 +8,7 @@ same vpn using NAT
 
 http://nerderati.com/2011/03/17/simplify-your-life-with-an-ssh-config-file/
 
+http://joeykelly.net/rants/vpn_using_ssh.txt
 
 Let's say you're on a laptop in a coffee shop and want to reach your home or
 office network. Your home LAN is on a 192.168.0.0/24 subnet. Bear in mind that
