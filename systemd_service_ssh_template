@@ -1,0 +1,13 @@
+[Unit]
+Description=Setup a secure vpn home. 
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/ssh -NT  -o ServerAliveInterval=60 -o "StrictHostKeyChecking no" -i <location_of_ssh_key_to_use> <username>@<ip-address> -p <remot_port|22> -R <remote_local_port>:localhost:<ssh_port> 
+
+# Restart every >2 seconds to avoid StartLimitInterval failure
+RestartSec=5
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
