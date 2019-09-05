@@ -2,4 +2,4 @@ sudo ssh-keygen
 sudo ip link set dev eth0 mtu 1400  #eth0 is your nic. reducing mtu to avoid any croping of packets due to mtu mismatch along the way.
 sudo ssh-keygen
 sudo ssh-copy-id <ip_address_of_router>
-sudo ssh -w0:0 <ip_address_or_router> 
+sudo ssh -v -o Tunnel=ethernet -w 2:2  <ip_address_or_router> 
